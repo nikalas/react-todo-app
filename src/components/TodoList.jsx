@@ -4,6 +4,7 @@ import TodoForm from "./TodoForm";
 
 function TodoList() {
 	const [todos, setTodos] = useState(
+		// Get todos from storage
 		JSON.parse(localStorage.getItem("todos")) || []
 	);
 
@@ -23,6 +24,7 @@ function TodoList() {
 	};
 
 	const updateTodo = (todoId, newValue) => {
+		// skip empty lines and strip repeated white spaces
 		if (!newValue.text || /^\s*$/.test(newValue.text)) {
 			return;
 		}
