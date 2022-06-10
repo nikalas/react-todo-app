@@ -25,7 +25,6 @@ function TodoList() {
 		);
 	};
 
-	console.log("stuff");
 	const removeTodo = (id) => {
 		const removeArr = [...todos].filter((todo) => todo.id !== id);
 
