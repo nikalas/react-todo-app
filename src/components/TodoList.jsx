@@ -43,8 +43,8 @@ function TodoList() {
 	};
 
 	return (
-		<div className="text-center max-w-fit mx-auto text-gray-100 drop-shadow-lg bg-slate-900 bg- rounded-xl px-6 py-8">
-			<h1 className="pb-2">What's the Plan for Today</h1>
+		<div className="min-w-fit md:max-w-md mx-auto text-gray-100 drop-shadow-lg bg-slate-900 rounded-xl px-6 py-8">
+			<h2 className="pb-2 text-center">What's the Plan for Today</h2>
 			<TodoForm onSubmit={addTodo} />
 			<Todo
 				todos={todos}
