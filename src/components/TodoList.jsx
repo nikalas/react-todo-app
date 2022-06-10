@@ -3,10 +3,10 @@ import Todo from "./Todo";
 import TodoForm from "./TodoForm";
 
 function TodoList() {
-	const [todos, setTodos] = useState(
+	const [todos, setTodos] = useState(() => {
 		// Get todos from storage
-		JSON.parse(localStorage.getItem("todos")) || []
-	);
+		return JSON.parse(localStorage.getItem("todos")) || [];
+	});
 
 	// Save list to local storage
 	useEffect(() => {
