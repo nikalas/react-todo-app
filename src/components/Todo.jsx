@@ -41,11 +41,11 @@ function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
 			<div className="icons flex gap-2 ml-auto items-center text-xl">
 				<RiCloseCircleLine
 					onClick={() => removeTodo(todo.id)}
-					className="delete-icon"
+					className="delete-icon rounded-full hover:bg-red-600 hover:text-gray-50 hover:drop-shadow-sm hover:-translate-y-[2px] transition"
 				/>
 				<TiEdit
 					onClick={() => setEdit({ id: todo.id, value: todo.text })}
-					className="edit-icon"
+					className="edit-icon rounded hover:bg-fuchsia-500 hover:text-gray-50 hover:drop-shadow-sm hover:-translate-y-[2px] transition"
 				/>
 			</div>
 		</div>
