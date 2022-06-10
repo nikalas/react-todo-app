@@ -23,6 +23,7 @@ function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
 
 	return todos.map((todo, index) => (
 		<div
+			id={todo.id}
 			key={index}
 			className={`todo-row gap-2 rounded flex p-1 px-3 mt-2 drop-shadow
 				${
