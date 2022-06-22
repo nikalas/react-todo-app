@@ -14,6 +14,7 @@ function TodoList() {
 	}, [todos]);
 
 	const addTodo = (todo) => {
+		// skip empty lines and strip repeated white spaces
 		if (!todo.text || /^\s*$/.test(todo.text)) {
 			return;
 		}
@@ -51,7 +52,7 @@ function TodoList() {
 	};
 
 	return (
-		<div className="min-w-fit md:max-w-md mx-auto text-gray-100 drop-shadow-lg bg-slate-900 rounded-xl px-6 py-8">
+		<div className="px-6 py-8 mx-auto text-gray-100 min-w-fit md:max-w-md drop-shadow-lg bg-slate-900 rounded-xl">
 			<h2 className="pb-2 text-center">What's the Plan for Today</h2>
 			<TodoForm onSubmit={addTodo} />
 			<Todo

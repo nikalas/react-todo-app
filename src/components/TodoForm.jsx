@@ -16,6 +16,8 @@ function TodoForm(props) {
 	const handleSubmit = (event) => {
 		event.preventDefault();
 
+		// Create a random id (will most likely be fine for this app)
+		// and set the input
 		props.onSubmit({
 			id: Math.floor(Math.random() * 10000),
 			text: input,
@@ -45,7 +47,7 @@ function TodoForm(props) {
 				onChange={handleChange}
 				ref={inputRef}
 			/>
-			<button className="todo-button rounded-full px-2 py-1  text-gray-50">
+			<button className="px-2 py-1 rounded-full todo-button text-gray-50">
 				{props.edit ? "Update" : "Add todo"}
 			</button>
 		</form>
